@@ -6,8 +6,8 @@
 
 </head>
 <body>
-<button class="btnPrompt"> Отримання посилання </button>
-<button class="btnLink">  Перехід за посиланням </button>
+<button class="btnPrompt"> Отримання посилання</button>
+<button class="btnLink"> Перехід за посиланням</button>
 <script>
     /* На сторінці є дві кнопки. - переадресовується на інший сайт (за раніше введеним посиланням).
      Реалізувати перевірку на http/https. Якщо протокол не вказаний - додаємо*/
@@ -18,34 +18,21 @@
     let linkArr;
     let stringLink;
 
-    btnGetLink.addEventListener("click", function() {
-        link = prompt("Введіть посилання");
-        linkArr = link.split("");
-        let arrText = [];
-        const checkHttp = ['h','t','t','p'];
-        const checkHttps = ['h','t','t','p','s'];
-
-        for(let i = 0; i < 5; i++) {
-            arrText.push(linkArr[i]);
+    btnGetLink.addEventListener("click", function () {
+        link = prompt("Введіть посилання", "google.com");
+        if (!link.startsWith("https") || !link.startsWith("http")) {
+            linkArr = link.split("");
+            linkArr.unshift("https://");
+            stringLink = linkArr.join("");
+        } else {
+            btnGoToLink.addEventListener("click", function () {
+                location.href = link;
+            })
         }
-
-        for(let i = 0; i < arrText.length; i++) {
-            if(arrText[i] === checkHttps[i] || arrText[i] === checkHttp[i])
-            {
-                
-            }
-            else
-            {
-                linkArr.unshift('h','t','t','p','s',':','/','/');
-                break
-            }
-        }
-
-        stringLink = linkArr.join("");
 
     })
 
-    btnGoToLink.addEventListener("click", function() {
+    btnGoToLink.addEventListener("click", function () {
         location.href = stringLink;
     })
 
