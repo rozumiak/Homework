@@ -20,7 +20,7 @@
 
     btnGetLink.addEventListener("click", function () {
         link = prompt("Введіть посилання", "google.com");
-        if (!link.startsWith("https") || !link.startsWith("http")) {
+        if (!link.startsWith("https") && !link.startsWith("http")) {
             linkArr = link.split("");
             linkArr.unshift("https://");
             stringLink = linkArr.join("");
