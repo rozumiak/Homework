@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework11</title>
+    <script>
+        /*Реалізувати рекурсивну функцію, яка зводить число в ступінь.
+        Число, яке треба піднести до ступеню, передається як перший аргумент у функції;
+        Ступінь передається як другий аргумент у функцію pow (num, degree).*/
+        let num = +prompt("Введіть число", "1")
+        let degree = +prompt("Введіть ступінь", "0")
+
+        function pow(num, degree) {
+            if (degree === 1) {
+                return num;
+            } else if (degree === 0) {
+                return 1;
+            } else {
+                return num * pow(num, degree - 1);
+            }
+
+        }
+
+        console.log(pow(num, degree));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
