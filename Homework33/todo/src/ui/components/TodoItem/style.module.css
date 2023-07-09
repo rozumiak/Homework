@@ -1,0 +1,23 @@
+.todo_item {
+    display: flex;
+    padding: 10px;
+    background: #ffeeee;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo-item--checked {
+    text-decoration: line-through;
+}
+.todo_item__description {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+.todo_item__delete {
+    background: #0be6e6;
+    border: none;
+    cursor: pointer;
+    width: 95px;
+    padding: 10px;
+}
