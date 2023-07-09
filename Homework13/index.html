@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework13</title>
+
+</head>
+<body>
+<button class="btnPrompt"> Отримання посилання</button>
+<button class="btnLink"> Перехід за посиланням</button>
+<script>
+    /* На сторінці є дві кнопки. - переадресовується на інший сайт (за раніше введеним посиланням).
+     Реалізувати перевірку на http/https. Якщо протокол не вказаний - додаємо*/
+    let btnGetLink = document.querySelector(".btnPrompt");
+    let btnGoToLink = document.querySelector(".btnLink");
+
+    let link;
+    let linkArr;
+    let stringLink;
+
+    btnGetLink.addEventListener("click", function () {
+        link = prompt("Введіть посилання", "google.com");
+        if (!link.startsWith("https") && !link.startsWith("http")) {
+            linkArr = link.split("");
+            linkArr.unshift("https://");
+            stringLink = linkArr.join("");
+        } else {
+            btnGoToLink.addEventListener("click", function () {
+                location.href = link;
+            })
+        }
+
+    })
+
+    btnGoToLink.addEventListener("click", function () {
+        location.href = stringLink;
+    })
+
+
+</script>
+</body>
+</html>
