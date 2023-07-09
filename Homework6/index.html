@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework6</title>
+    <script>
+        //Вивести числа від 20 до 30 через пропуск, використовуючи крок 0,5 (20 20,5 21 21,5….).
+
+        /*for(let i = 20; i<=30; i+=0.5){
+            console.log(`${i} `);
+        }*/
+
+        //Один долар коштує 27 гривень. Вивести дані з розрахунком вартості 10, 20, 30... 100 доларів.
+
+        /*for(let i = 10; i<=100; i+=10) {
+            console.log(`${i * 27}`);
+        }*/
+
+        //Дане ціле число. Вивести всі цілі числа від 1 до 100, квадрат яких не перевищує числа N.
+
+        /*let n = +prompt("Введіть ціле число");
+        for(let i = 1; i<=100; i++){
+            if(n>i**2){
+                console.log(i);
+            }
+        }*/
+
+        //Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
+
+        /*let n = +prompt("Введіть ціле позитивне число");
+        if(n===2){
+            console.log(`Число ${n} просте`);
+        }
+        else if(n===1){
+            console.log(`Число ${n} непросте`);
+        }
+        for(let i = 2; i<n; i++)
+        {
+            if(n % i === 0){
+                console.log(`Число ${n} непросте`);
+                break;
+            }
+            else if(n === i+1){
+                console.log(`Число ${n} просте`);
+                break;
+            }
+        }*/
+
+        //Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь.
+        // (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
+
+        /*let n = +prompt("Введіть ціле число");
+
+        if (n===0){
+            console.log('Не Можна');
+        }
+        for (let i = 0; i<n; i++){
+            let result = 3**i;
+
+            if(n!==result){
+                if(result>n){
+                    console.log('Не Можна');
+                    break;
+                }
+                continue;
+            }
+            console.log('Можна');
+            break;
+        }*/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
