@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework12</title>
+
+</head>
+<body>
+<button id="show_pokemon">Who's that Pokemon?</button>
+<div>
+    <img id="show_img" alt="" src="" height="215" width="215">
+</div>
+<script>
+    /*У папці images є зображення 1.jpg, 2.jpg, 3.jpg, 4.jpg, 5 .jpg, 6.jpg, 7.jpg, 8.jpg, 9.jpg
+    Вивести зображення з цієї папки, отримане випадковим чином (Math.random)*/
+
+    const _imgOut = document.getElementById("show_img");
+    const _imgPokemon = document.getElementById("show_pokemon");
+
+    _imgPokemon.addEventListener("click", function () {
+        _imgOut.src = `images/${Math.floor(Math.random() * 9) + 1}.png`
+
+    })
+
+</script>
+</body>
+</html>
