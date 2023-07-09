@@ -1,0 +1,9 @@
+.form{
+    display: block;
+}
+.valid_list{
+    color: green;
+}
+.error_list_show{
+    color: red;
+}
