@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework9</title>
+    <script>
+        /*Написати функцію, яка приймає 1 параметр. з тим, що передали перший раз і т. д. Все це із замиканнями, наприклад:
+        sum(3) = 3
+        sum(5) = 8
+        sum(20) = 28*/
+
+        function calcSum() {
+            let result = 0;
+            return function sum(number) {
+                console.log(result += number);
+            }
+        }
+
+        const sum = calcSum();
+        sum(3);
+        sum(5);
+        sum(20);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
