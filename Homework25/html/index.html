@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SWAPI</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>SWAPI</h1>
+    <form action="https://swapi.dev/api/" id="js--swapi_form" class="swapi_input">
+        <span>https://swapi.dev/api/</span>
+        <input type="text" name="url" placeholder="people/1/" class="js--swapi_input">
+        <button id="js--get_info" class="btn_get_info" type="submit">Get info</button>
+    </form>
+    <div id="js--info" class="info">
+        <small id="js--swapi_controller" class="info-controller d-none"></small>
+        <small id="js--swapi_id" class="info-id d-none"></small>
+        <pre id="js--swapi_pre" class="info-text">
+            <span id="js--swapi_loader" class="loader d-none"></span>
+        </pre>
+    </div>
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>
